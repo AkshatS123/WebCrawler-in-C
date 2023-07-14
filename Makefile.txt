@@ -1,0 +1,11 @@
+CC = gcc
+LIBS = -lcurl
+
+all: crawler
+
+crawler:
+	$(CC) -o crawler crawler.c curl.c url.c $(LIBS)
+
+clean:
+	rm -f crawler *.o
+	rm -f pages/*
